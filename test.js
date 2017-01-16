@@ -15,10 +15,36 @@ for (var i = 0; i <= words.length - 1; i++) {
 }
 
 
+var varRWord = "applo",
+	varUword = "appel",
+	derp = [];
+	function test(){
+		if (varRWord == varUword){
+			checkword(i);
+		}else{
+			for (var i = 0; i < varRWord.length; i++){
+				checkword(i);
+			}
+	}
+	console.log(derp);
+}
+function checkword(id) {
+	if (varRWord.charAt(id) == varUword.charAt(id)){
+		derp.push(1);
+	} else {
+		if (varUword.charAt(id) = varRWord.charAt(0)||(varUword.charAt(id) = varRWord.charAt(1) ||
+			(varUword.charAt(id) = varRWord.charAt(2)||(varUword.charAt(id) = varRWord.charAt(3)||
+			(varUword.charAt(id) = varRWord.charAt(4)){
+				derp.push(2);
+			} else{
+				derp.push(0);
+			}
+	}
 
+}
 
-
-var myArray = [	"appel",
+var myArray = [	
+"appel",
 	"aldus",
 	"afwas",
 	"aftel",
