@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+var myArray = ['January', 'February', 'March', 'April', 'May'];    
+
+var rand = Math.floor(Math.random() * myArray.length);
+
+var concat = myArray[rand];
+
+function random() {
+   document.getElementById("demo").innerHTML = (concat);
+}
+</script>
+
+<button onClick="random();">
+Working Random Array generator
+</button>
+
+</body>
+</html>

@@ -1,5 +1,24 @@
-var words = [
-	"appel",
+var words = "jasper";
+var input = "maarte";
+words = words.split("");
+
+console.log(words);
+
+for (var i = 0; i <= words.length - 1; i++) {
+	for (var j = 0; j <= input.length - 1; j++) {
+		if (words[i] == input[j] ) {
+			console.log("Ja, " + words[i] + " staat gelijk aan " + input[j]); 
+		} else {
+			console.log("Nee, " + words[i] + " staat NIET gelijk aan " + input[j]);
+		}
+	}
+}
+
+
+
+
+
+var myArray = [	"appel",
 	"aldus",
 	"afwas",
 	"aftel",
@@ -477,30 +496,16 @@ var words = [
 	"zaken",
 	"zeker",
 	"zever",
-	"zeeen"];
+	"zeeen"];    
 
+var rand = Math.floor(Math.random() * myArray.length);
 
+var concat = myArray[rand];
 
-var words = "jasper";
-var input = "maarte";
-words = words.split("");
-
-console.log(words);
-
-for (var i = 0; i <= words.length - 1; i++) {
-	for (var j = 0; j <= input.length - 1; j++) {
-		if (words[i] == input[j] ) {
-			console.log("Ja, " + words[i] + " staat gelijk aan " + input[j]); 
-		} else {
-			console.log("Nee, " + words[i] + " staat NIET gelijk aan " + input[j]);
-		}
-	}
+function random() {
+   document.getElementById("demo").innerHTML = (concat);
 }
-
-
-
 //Break = door gaan naar de volgende loop 
 //continu = 1 overslaan
-var rand = myArray[Math.floor(Math.random() * myArray.length)];
-var myArray = ['January', 'February', 'March'];    
-console.log(myArray);
+
+
