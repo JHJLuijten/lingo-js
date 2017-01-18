@@ -1,20 +1,10 @@
-var words = "jasper";
-var input = "maarte";
-words = words.split("");
+var rand = Math.floor(Math.random() * myArray.length);
 
-console.log(words);
+var concat = myArray[rand];
 
-for (var i = 0; i <= words.length - 1; i++) {
-	for (var j = 0; j <= input.length - 1; j++) {
-		if (words[i] == input[j] ) {
-			console.log("Ja, " + words[i] + " staat gelijk aan " + input[j]); 
-		} else {
-			console.log("Nee, " + words[i] + " staat NIET gelijk aan " + input[j]);
-		}
-	}
+function random() {
+   document.getElementById("demo").innerHTML = (concat);
 }
-
-
 var varRWord = "applo",
 	varUword = "appel",
 	derp = [];
@@ -34,7 +24,8 @@ function checkword(id) {
 	} else {
 		if (varUword.charAt(id) = varRWord.charAt(0)||(varUword.charAt(id) = varRWord.charAt(1) ||
 			(varUword.charAt(id) = varRWord.charAt(2)||(varUword.charAt(id) = varRWord.charAt(3)||
-			(varUword.charAt(id) = varRWord.charAt(4)){
+			(varUword.charAt(id) = varRWord.charAt(4))
+			{
 				derp.push(2);
 			} else{
 				derp.push(0);
@@ -42,6 +33,10 @@ function checkword(id) {
 	}
 
 }
+
+words = words.split("");
+
+
 
 var myArray = [	
 "appel",
@@ -524,13 +519,7 @@ var myArray = [
 	"zever",
 	"zeeen"];    
 
-var rand = Math.floor(Math.random() * myArray.length);
 
-var concat = myArray[rand];
-
-function random() {
-   document.getElementById("demo").innerHTML = (concat);
-}
 //Break = door gaan naar de volgende loop 
 //continu = 1 overslaan
 
