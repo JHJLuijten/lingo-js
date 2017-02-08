@@ -1,40 +1,4 @@
-var rand = Math.floor(Math.random() * myArray.length);
 
-var concat = myArray[rand];
-
-function random() {
-   document.getElementById("demo").innerHTML = (concat);
-}
-var varRWord = "applo",
-	varUword = "appel",
-	derp = [];
-	function test(){
-		if (varRWord == varUword){
-			checkword(i);
-		}else{
-			for (var i = 0; i < varRWord.length; i++){
-				checkword(i);
-			}
-	}
-	console.log(derp);
-}
-function checkword(id) {
-	if (varRWord.charAt(id) == varUword.charAt(id)){
-		derp.push(1);
-	} else {
-		if (varUword.charAt(id) = varRWord.charAt(0)||(varUword.charAt(id) = varRWord.charAt(1) ||
-			(varUword.charAt(id) = varRWord.charAt(2)||(varUword.charAt(id) = varRWord.charAt(3)||
-			(varUword.charAt(id) = varRWord.charAt(4))
-			{
-				derp.push(2);
-			} else{
-				derp.push(0);
-			}
-	}
-
-}
-
-words = words.split("");
 
 
 
@@ -522,5 +486,44 @@ var myArray = [
 
 //Break = door gaan naar de volgende loop 
 //continu = 1 overslaan
+function Game() {
+	var generatedWord;
+	this.randomWord = function () {
+
+		generatedWord = myArray[Math.floor(Math.random() * myArray.length)];
+	};
+	this.checkWord = function (word){
+		var derp = [];
+		if (generatedWord == word){
+			return "ggwp scrub"
+		}else{
+			for (var id = 0; id < generatedWord.length; id++){
+				if (generatedWord.charAt(id) == word.charAt(id)){
+					derp.push(1);
+				} else {
+					if (word.charAt(id) == generatedWord.charAt(0)||word.charAt(id) == generatedWord.charAt(1) ||
+						word.charAt(id) == generatedWord.charAt(2)||word.charAt(id) == generatedWord.charAt(3)||
+						word.charAt(id) == generatedWord.charAt(4))
+					{
+						derp.push(2);
+					} else{
+						derp.push(0);
+					}
+				}
+			}
+			return derp
+		}
+	}
+}
+function show(){
+	var x = document.getElementById("guess").value;
+	document.getElementById("regel1blokje1").innerHTML = x;
+}
+var game = new Game();
+
+(function() {
+	game.randomWord();
+})()
+
 
 
