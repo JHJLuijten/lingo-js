@@ -483,15 +483,10 @@ var myArray = [
 	"zever",
 	"zeeen"];    
 
-
+var generatedWord = myArray[Math.floor(Math.random() * myArray.length)]
 //Break = door gaan naar de volgende loop 
 //continu = 1 overslaan
 function Game() {
-	var generatedWord;
-	this.randomWord = function () {
-
-		generatedWord = myArray[Math.floor(Math.random() * myArray.length)];
-	};
 	this.checkWord = function (word){
 		var derp = [];
 		if (generatedWord == word){
@@ -521,9 +516,7 @@ function show(){
 }
 var game = new Game();
 
-(function() {
-	game.randomWord();
-})()
 
+console.log(generatedWord.split(""));
 
 
